@@ -232,6 +232,15 @@ call togglebg#map("<F5>")
 
 
 
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+set clipboard=unnamed
+
+"define BadWhitespace before using in a match
+highlight BadWhitespace ctermbg=red guibg=darkred
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+
+
 
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
 
